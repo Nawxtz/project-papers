@@ -564,5 +564,18 @@ class HookTest(unittest.TestCase):
         self.assertIn("XGBoost", self.run_hook(dict(ev, session_id="t")))
         self.assertEqual(self.run_hook({"tool_input": {"file_path": "/nonexistent/x.py"}}), "")
 
+    def test_long_list_keeps_whole_entries_and_the_note(self):
+        root = make_project({"app.js": "x = 1\n"})
+        many = [{"facet": "F1", "facet_name": "f", "role": "match", "files": ["app.js"], "anchors": [],
+                 "title": "Paper %d" % i, "year": 2020, "url": "u", "verified": True,
+                 "quote": "q" * 200, "reason": "r" * 200} for i in range(12)]
+        papers.save_json(os.path.join(root, ".papers", "codemap.json"), {"papers": many})
+        ev = {"session_id": "s", "tool_input": {"file_path": os.path.join(root, "app.js")}}
+        text = json.loads(self.run_hook(ev))["hookSpecificOutput"]["additionalContext"]
+        self.assertLessEqual(len(text), 1800)
+        self.assertTrue(text.endswith("say so when you rely on it."))
+        self.assertRegex(text, r"\(\d+ more: run papers.py lookup app.js\)")
+        self.assertEqual(text.count("abstract: \""), text.count("- Paper "))
+
 if __name__ == "__main__":
     unittest.main()

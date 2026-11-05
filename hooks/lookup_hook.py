@@ -52,16 +52,22 @@ def main():
     seen["files"].append(rel)
     with open(seen_path, "w", encoding="utf-8") as f:
         json.dump(seen, f)
-    out = ["Papers linked to %s (from docs/papers.md; each quote is checked word for word against the abstract):" % rel]
-    for p in papers:
-        out.append("- %s (%s) [%s, %s]%s: %s" % (p["title"], p.get("year") or "n.d.", p["facet_name"], p["role"],
-                                               "" if p.get("verified") else " NOT verified", p["url"]))
-        out.append('  abstract: "%s" | why: %s' % (p["quote"], p["reason"]))
-    out.append("Use them to understand the method. Only the quoted sentence is checked. Anything else you recall "
-               "about these papers (parameters, procedures, results) is unchecked: say so when you rely on it.")
+    head = "Papers linked to %s (from docs/papers.md; each quote is checked word for word against the abstract):" % rel
+    note = ("Use them to understand the method. Only the quoted sentence is checked. Anything else you recall "
+            "about these papers (parameters, procedures, results) is unchecked: say so when you rely on it.")
+    # Whole entries only, and the note always last: a cut in the middle once dropped it.
+    out, size = [head], len(head) + len(note) + 60
+    for n, p in enumerate(papers):
+        entry = "- %s (%s) [%s, %s]%s: %s\n  abstract: \"%s\" | why: %s" % (
+            p["title"], p.get("year") or "n.d.", p["facet_name"], p["role"],
+            "" if p.get("verified") else " NOT verified", p["url"], p["quote"], p["reason"])
+        if size + len(entry) > MAX_CHARS and n:
+            out.append("(%d more: run papers.py lookup %s)" % (len(papers) - n, rel))
+            break
+        out.append(entry)
+        size += len(entry) + 1
+    out.append(note)
     text = "\n".join(out)
-    if len(text) > MAX_CHARS:
-        text = text[:MAX_CHARS] + "\n(more: run papers.py lookup %s)" % rel
     print(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse", "additionalContext": text}}))
 
 

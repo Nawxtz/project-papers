@@ -57,7 +57,7 @@ Pinch, all runs in each arm combined:
 - **The papers did not measurably change the result.** All 10 smoothing runs chose a One Euro filter, with or without the paper. The spread between runs comes from parameter choices and is larger than any gap between arms. With 2-4 runs per cell this test can only rule out a large effect, not a small one.
 - **What the papers did change.**
   - With `p1`, all 4 smoothing runs named the 1€ paper as the origin of their method.
-  - With `p0`, both runs said the papers did not help.
+  - With `p0`, 2 of the 4 runs (both Sonnet) said the papers did not help, and one Haiku run cited the 1€ paper from memory, unchecked.
   - The value shown here is a correct, checked citation for the method the code uses, not better code.
 - **A risk.** One `p1` run stated a tuning procedure "from the paper" that is not in the abstract it was given. `lookup` and the hook now say that only the quoted sentence is checked.
 - **Limits.**

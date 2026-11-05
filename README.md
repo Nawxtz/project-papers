@@ -96,9 +96,9 @@ The full workflow was run on 6 projects of different kinds: a Python quant-tradi
 Finding relevant papers is one question. Whether they help an agent change code is another. `bench/codetask/` tests the second one on the hand-tracking app. There are two tasks: replace the fingertip smoothing, and replace the pinch detector. Each result is scored by a hidden simulator.
 
 - **Setup.** 16 runs (Claude Sonnet and Haiku, web access off), each with no papers, with the skill's earlier output, or with its current output.
-- **Every run beat the original code by a wide margin.** Lag on fast strokes fell from 33 px to 7-16 px, and false pinches fell from 133 to 0-1.
+- **Every run beat the original code by a wide margin.** Error on fast strokes fell from 33 px to 7-16 px, and false pinches fell from 133 to 0-1.
 - **With versus without papers: no measurable difference.** Every smoothing run picked a One Euro filter from its own knowledge. Parameter choices varied more than the arms did.
-- **What the papers added was a correct origin.** With the current output, every smoothing run cited the 1€ filter paper the method comes from. With the earlier output, the agents said the papers did not help.
+- **What the papers added was a correct origin.** With the current output, every smoothing run cited the 1€ filter paper the method comes from. With the earlier output, 2 of the 4 runs said the papers did not help, and one cited the 1€ paper from memory, unchecked.
 - **One run stated a tuning procedure "from the paper" that the abstract does not contain.** `lookup` and the hook now say that only the quoted sentence is checked.
 
 So expect the skill to tell you and your agent where the code's methods come from, with checked citations. Do not expect it to make an agent's code better on techniques the model already knows. This test is small (2-4 runs per cell), and its traces are synthetic.
