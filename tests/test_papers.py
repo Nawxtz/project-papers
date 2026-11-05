@@ -161,7 +161,7 @@ class ProfileTest(unittest.TestCase):
         return {"facets": [f]}
 
     def test_valid_quote_evidence(self):
-        errors, warnings, norm = papers.check_profile(self.root, self.facet(), self.scan)
+        errors, _, norm = papers.check_profile(self.root, self.facet(), self.scan)
         self.assertEqual(errors, [])
         self.assertEqual(norm["facets"][0]["evidence"], ["app/detector.py:2"])
 
@@ -522,7 +522,7 @@ class FinalizeTest(unittest.TestCase):
         json.dump({"candidates": cands}, open(st("candidates.json"), "w"))
         json.dump({"facets": [{"id": "F1", "name": "N", "evidence": ["a.py:1"]},
                               {"id": "F2", "name": "Empty", "evidence": ["b.py:2"]}]}, open(st("profile.json"), "w"))
-        acc = [dict(cid=c["cid"], facet="F1", task=2, method=2, setting=1, quote="q", reason="r", paper=c)
+        acc = [{"cid": c["cid"], "facet": "F1", "task": 2, "method": 2, "setting": 1, "quote": "q", "reason": "r", "paper": c}
                for c in cands]
         json.dump({"accepted": acc}, open(st("accepted.json"), "w"))
         # A later search renumbers C-ids; finalize must still use the judged papers.

@@ -328,7 +328,7 @@ class Http:
                 if e.code == 404:
                     raise
                 if e.code not in (429, 500, 502, 503, 504):
-                    raise RuntimeError("%s for %s" % (last_err, url))
+                    raise RuntimeError("%s for %s" % (last_err, url)) from e
                 if e.code == 429 and kind == "openalex" and not self.oa_key:
                     last_err += "; the free OpenAlex budget without a key is about 100 searches/day per IP. Set OPENALEX_API_KEY"
                     break  # budget exhausted: retrying only wastes time
@@ -419,7 +419,7 @@ def dep_lines(base, ext, lines):
         if base == "go.mod":
             m = re.match(r"\s*(?:require\s+)?([\w.-]+\.[a-z]{2,}/[\w./-]+)\s+v\d", s)
         elif base == "cargo.toml" or (base == "pyproject.toml" and "poetry" in section):
-            ok = section.endswith("dependencies") or section.endswith("dev-dependencies")
+            ok = section.endswith("dependencies")  # also dev-dependencies
             m = re.match(r"\s*([A-Za-z0-9][\w.-]*)\s*=", s) if ok else None
             if m and m.group(1).lower() == "python":
                 m = None
@@ -1840,6 +1840,8 @@ def cmd_finalize(a):
     print("wrote %s, %s and %s" % (out_md, out_bib, out_json))
     print(http.usage())
     print("papers listed: %d; verification: %s" % (len(accepted) - len(dropped), counts))
+    per = {f["id"]: sum(c["facet"] == f["id"] for c in codemap) for f in profile["facets"]}
+    print("per facet: " + ", ".join("%s %d%s" % (k, v, "" if v else " (no match)") for k, v in per.items()))
     for d in dropped:
         print("DROPPED " + d)
 
