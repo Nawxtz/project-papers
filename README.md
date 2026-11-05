@@ -113,6 +113,7 @@ The same test found three holes, now fixed:
 
 - Narrow topics without a well-known seed paper (for example, Thai address parsing) have few relevant papers in any source. The skill says so instead of padding.
 - Papers without an abstract in OpenAlex or Crossref cannot be accepted, because there is nothing to quote.
+- The script checks that each quote is real, not that the agent's scores are fair. In one test an agent accepted a paper with a single distance threshold for a facet about two-threshold (hysteresis) pinch detection. Read the "Why" and "Abstract says" lines before relying on a match.
 - Ranking cannot tell a peer-reviewed study from a student project write-up. `show` prints the venue so the agent and you can tell them apart.
 - Papers with no DOI or arXiv ID (some theses and repository copies) cannot be cross-checked and are marked NOT verified.
 - Google Scholar and Semantic Scholar are not used. Google Scholar has no API and blocks automated access. Semantic Scholar needs a key for reliable access.

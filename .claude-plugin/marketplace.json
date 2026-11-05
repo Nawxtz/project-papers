@@ -1,6 +1,9 @@
 {
   "name": "project-papers",
-  "owner": { "name": "Nawxtz" },
+  "owner": {
+    "name": "Nawxtz"
+  },
+  "description": "Agent skill that finds research papers matching what your code does, with checked quotes and citations.",
   "plugins": [
     {
       "name": "project-papers",
