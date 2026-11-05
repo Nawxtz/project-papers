@@ -1,0 +1,25 @@
+F1 [MediaPipe real-time hand landmark tracking, foundation] MediaPipe Hands: On-device Real-time Hand Tracking (2020)
+   https://arxiv.org/abs/2006.10214
+   abstract: "The pipeline consists of two models: 1) a palm detector, 2) a hand landmark model."
+   why: Original MediaPipe Hands paper for the @mediapipe/hands model loaded in index.html.
+   code: index.html:923
+F2 [Exponential smoothing of fingertip trajectory, match] 1 € filter (2012)
+   https://doi.org/10.1145/2207676.2208639
+   abstract: "It uses a first order low-pass filter with an adaptive cutoff frequency: at low speeds, a low cutoff stabilizes the signal by reducing jitter"
+   why: Speed-adaptive low-pass filter could replace the fixed 0.5 weight smoothing of the fingertip point in index.html.
+   code: index.html:1419, index.html:1612
+F3 [Hysteresis thresholds for pinch gesture detection, match] PyGesture: A Python Implementation of Real-Time Hand Tracking for Gesture-Based Drawing Interfaces (2025)
+   https://doi.org/10.1109/aectsd65988.2025.11411403
+   abstract: "The pinch gesture detection uses a reasonable threshold of Euclidean distance"
+   why: Distance-threshold pinch detection on MediaPipe landmarks for drawing, comparable to the pinch enter/release thresholds in PINCH_CONFIG.
+   code: index.html:935
+F4 [Rule-based static hand gesture recognition from landmarks, match] On-device Real-time Hand Gesture Recognition (2021)
+   https://arxiv.org/abs/2111.00038
+   abstract: "The system consists of two parts: a hand skeleton tracker and a gesture classifier."
+   why: Static gesture classifier with heuristics on MediaPipe Hands skeleton, matching extendedFingers and detectThumbPose in index.html.
+   code: index.html:1339, index.html:1328
+F4 [Rule-based static hand gesture recognition from landmarks, match] Real-Time Hand Gesture Recognition for Markerless Virtual Mouse Control Using MediaPipe Landmarks (2026)
+   https://doi.org/10.22214/ijraset.2026.78823
+   abstract: "integrates the 21-point hand landmark model of MediaPipe Hands with a rule-based geometric gesture interpretation method"
+   why: Rule-based geometric gesture rules on MediaPipe landmarks, same approach as the finger-extension angle test in index.html.
+   code: index.html:1339, index.html:1328

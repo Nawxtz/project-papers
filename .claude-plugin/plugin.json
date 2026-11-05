@@ -1,0 +1,8 @@
+{
+  "name": "project-papers",
+  "version": "0.1.0",
+  "description": "Find research papers that match what a code project actually does, grounded in code evidence, with verbatim-quote and registry checks so no paper or claim is invented.",
+  "author": { "name": "Nawxtz" },
+  "license": "MIT",
+  "keywords": ["research", "papers", "citations", "literature", "openalex"]
+}

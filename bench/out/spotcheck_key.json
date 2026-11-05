@@ -1,0 +1,82 @@
+{
+ "1": {
+  "pid": "P47",
+  "claude_label": 0
+ },
+ "2": {
+  "pid": "P95",
+  "claude_label": 2
+ },
+ "3": {
+  "pid": "P236",
+  "claude_label": 2
+ },
+ "4": {
+  "pid": "P161",
+  "claude_label": 1
+ },
+ "5": {
+  "pid": "P113",
+  "claude_label": 2
+ },
+ "6": {
+  "pid": "P75",
+  "claude_label": 0
+ },
+ "7": {
+  "pid": "P97",
+  "claude_label": 2
+ },
+ "8": {
+  "pid": "P96",
+  "claude_label": 1
+ },
+ "9": {
+  "pid": "P241",
+  "claude_label": 2
+ },
+ "10": {
+  "pid": "P178",
+  "claude_label": 2
+ },
+ "11": {
+  "pid": "P91",
+  "claude_label": 0
+ },
+ "12": {
+  "pid": "P220",
+  "claude_label": 0
+ },
+ "13": {
+  "pid": "P259",
+  "claude_label": 0
+ },
+ "14": {
+  "pid": "P103",
+  "claude_label": 2
+ },
+ "15": {
+  "pid": "P229",
+  "claude_label": 0
+ },
+ "16": {
+  "pid": "P197",
+  "claude_label": 2
+ },
+ "17": {
+  "pid": "P139",
+  "claude_label": 2
+ },
+ "18": {
+  "pid": "P50",
+  "claude_label": 0
+ },
+ "19": {
+  "pid": "P245",
+  "claude_label": 0
+ },
+ "20": {
+  "pid": "P193",
+  "claude_label": 2
+ }
+}

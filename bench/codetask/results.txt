@@ -1,0 +1,19 @@
+raw      still_rmse=3.85 slow_rmse=3.74 fast_rmse=3.66 still_jitter_px_per_frame=4.64
+ema0.5   still_rmse=2.27 slow_rmse=15.89 fast_rmse=32.77 still_jitter_px_per_frame=1.92
+np_smooth_sonnet still_rmse=1.65 slow_rmse=7.32 fast_rmse=13.59 still_jitter_px_per_frame=0.78
+np_smooth_sonnet_b still_rmse=2.09 slow_rmse=4.02 fast_rmse=6.87 still_jitter_px_per_frame=1.28
+np_smooth_haiku still_rmse=1.98 slow_rmse=4.60 fast_rmse=8.65 still_jitter_px_per_frame=1.02
+np_smooth_haiku_b still_rmse=1.68 slow_rmse=10.59 fast_rmse=15.57 still_jitter_px_per_frame=0.84
+p0_smooth_sonnet still_rmse=2.05 slow_rmse=4.42 fast_rmse=7.77 still_jitter_px_per_frame=1.33
+p0_smooth_haiku still_rmse=1.69 slow_rmse=8.32 fast_rmse=12.07 still_jitter_px_per_frame=0.85
+p1_smooth_sonnet still_rmse=1.66 slow_rmse=5.84 fast_rmse=10.46 still_jitter_px_per_frame=0.40
+p1_smooth_sonnet_b still_rmse=1.71 slow_rmse=7.12 fast_rmse=13.32 still_jitter_px_per_frame=0.95
+p1_smooth_haiku still_rmse=1.68 slow_rmse=10.59 fast_rmse=15.57 still_jitter_px_per_frame=0.84
+p1_smooth_haiku_b still_rmse=1.73 slow_rmse=8.16 fast_rmse=11.85 still_jitter_px_per_frame=0.94
+baseline missed=3 false_fires=133 double_fires=11 idle_fires=0 deliberate=718 latency_ms=117.2
+np_pinch_sonnet missed=0 false_fires=0 double_fires=0 idle_fires=0 deliberate=718 latency_ms=85.4
+np_pinch_haiku missed=1 false_fires=1 double_fires=0 idle_fires=0 deliberate=718 latency_ms=150.1
+p0_pinch_sonnet missed=0 false_fires=1 double_fires=1 idle_fires=0 deliberate=718 latency_ms=95.4
+p0_pinch_haiku missed=0 false_fires=0 double_fires=0 idle_fires=0 deliberate=718 latency_ms=100.2
+p1_pinch_sonnet missed=0 false_fires=0 double_fires=0 idle_fires=0 deliberate=718 latency_ms=89.0
+p1_pinch_haiku missed=0 false_fires=0 double_fires=1 idle_fires=0 deliberate=718 latency_ms=95.5

@@ -1,0 +1,110 @@
+[
+ {
+  "method": "M1_oa_title_abstract",
+  "P@10": 0.34,
+  "recall": 0.359,
+  "relevant": 17,
+  "listed": 41,
+  "abs_cov": 0.76,
+  "tok_per_rel": 353,
+  "tokens": 6000,
+  "requests": 5,
+  "seconds": 7.4
+ },
+ {
+  "method": "M1b_oa_search_param",
+  "P@10": 0.28,
+  "recall": 0.306,
+  "relevant": 14,
+  "listed": 50,
+  "abs_cov": 0.9,
+  "tok_per_rel": 586,
+  "tokens": 8198,
+  "requests": 5,
+  "seconds": 11.4
+ },
+ {
+  "method": "M7_crossref",
+  "P@10": 0.22,
+  "recall": 0.24,
+  "relevant": 11,
+  "listed": 50,
+  "abs_cov": 0.3,
+  "tok_per_rel": 321,
+  "tokens": 3532,
+  "requests": 5,
+  "seconds": 6.7
+ },
+ {
+  "method": "M4_related_works",
+  "P@10": 0.26,
+  "recall": 0.106,
+  "relevant": 13,
+  "listed": 27,
+  "abs_cov": 0.59,
+  "tok_per_rel": 227,
+  "tokens": 2946,
+  "requests": 3,
+  "seconds": 2.2
+ },
+ {
+  "method": "M2b_cites_search_relevance",
+  "P@10": 0.24,
+  "recall": 0.097,
+  "relevant": 12,
+  "listed": 30,
+  "abs_cov": 0.8,
+  "tok_per_rel": 379,
+  "tokens": 4546,
+  "requests": 3,
+  "seconds": 3.9
+ },
+ {
+  "method": "M2_cites_plus_search",
+  "P@10": 0.18,
+  "recall": 0.07,
+  "relevant": 9,
+  "listed": 23,
+  "abs_cov": 0.83,
+  "tok_per_rel": 417,
+  "tokens": 3752,
+  "requests": 3,
+  "seconds": 3.3
+ },
+ {
+  "method": "M6_arxiv",
+  "P@10": 0.14,
+  "recall": 0.049,
+  "relevant": 7,
+  "listed": 34,
+  "abs_cov": 1.0,
+  "tok_per_rel": 956,
+  "tokens": 6692,
+  "requests": 10,
+  "seconds": 28.5
+ },
+ {
+  "method": "M3_cites_local_filter",
+  "P@10": 0.08,
+  "recall": 0.032,
+  "relevant": 4,
+  "listed": 30,
+  "abs_cov": 1.0,
+  "tok_per_rel": 1444,
+  "tokens": 5777,
+  "requests": 3,
+  "seconds": 5.6
+ },
+ {
+  "method": "M5_references",
+  "P@10": 0.0,
+  "recall": 0.0,
+  "relevant": 0,
+  "listed": 30,
+  "abs_cov": 0.9,
+  "tok_per_rel": null,
+  "tokens": 4950,
+  "requests": 3,
+  "seconds": 3.7
+ }
+]

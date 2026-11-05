@@ -1,0 +1,11 @@
+{
+  "name": "project-papers",
+  "owner": { "name": "Nawxtz" },
+  "plugins": [
+    {
+      "name": "project-papers",
+      "source": "./",
+      "description": "Find research papers that match what a code project actually does, with no invented papers or quotes."
+    }
+  ]
+}

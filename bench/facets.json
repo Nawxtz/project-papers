@@ -1,0 +1,17 @@
+[
+ {"id":"F1","name":"CNN face detection with YuNet","task":"face detection","method":"lightweight anchor-free CNN detector (YuNet) via ONNX","setting":"real-time, CPU, webcam frames",
+  "queries":["lightweight face detection convolutional neural network real-time","YuNet face detector"],
+  "seed_titles":["YuNet: A Tiny Millisecond-level Face Detector"]},
+ {"id":"F2","name":"Haar cascade face detection","task":"face detection","method":"boosted cascade of Haar-like features (Viola-Jones)","setting":"real-time, CPU",
+  "queries":["Haar cascade face detection","boosted cascade simple features face detection"],
+  "seed_titles":["Rapid object detection using a boosted cascade of simple features"]},
+ {"id":"F3","name":"Thai address parsing","task":"parsing free-text postal addresses into fields","method":"rule-based parsing with gazetteer lookup","setting":"Thai language, noisy chat text",
+  "queries":["Thai address parsing","address parsing named entity recognition","postal address segmentation"],
+  "seed_titles":[]},
+ {"id":"F4","name":"Thai named entity recognition","task":"named entity recognition","method":"conditional random fields (PyThaiNLP thainer)","setting":"Thai language",
+  "queries":["Thai named entity recognition","conditional random fields Thai NER"],
+  "seed_titles":["PyThaiNLP: Thai Natural Language Processing in Python"]},
+ {"id":"F5","name":"Fuzzy matching for typo correction","task":"correcting misspelled place names against a gazetteer","method":"edit-distance fuzzy string matching (RapidFuzz ratio)","setting":"short strings, Thai place names",
+  "queries":["fuzzy string matching edit distance spelling correction","approximate string matching place names gazetteer"],
+  "seed_titles":["Binary codes capable of correcting deletions, insertions, and reversals"]}
+]

@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.papers/
+.ruff_cache/
+bench/out/.papers/
